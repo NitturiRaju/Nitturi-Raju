@@ -1,109 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Nitturi Raju</title>
 
-<style>
-html,body{
-margin:0;
-padding:0;
-width:100%;
-height:100%;
-overflow:hidden;
-background:#000;
-}
+<link rel="stylesheet" href="style.css">
 
-.container{
-position:relative;
-width:100vw;
-height:100vh;
-}
-
-.photo{
-width:100%;
-height:100vh;
-object-fit:contain;
-background:#000;
-display:block;
-margin:auto;
-}
-
-/* Invisible clickable areas */
-.link{
-position:absolute;
-border-radius:50%;
--webkit-tap-highlight-color:transparent;
-overflow:hidden;
-}
-
-/* Ripple effect */
-.link::after{
-content:"";
-position:absolute;
-left:50%;
-top:50%;
-width:0;
-height:0;
-border-radius:50%;
-background:rgba(255,255,255,.45);
-transform:translate(-50%,-50%);
-transition:width .35s,height .35s,opacity .45s;
-opacity:0;
-}
-
-.link:active::after{
-width:120%;
-height:120%;
-opacity:1;
-}
-
-/* ---------- ICON POSITIONS ---------- */
-/* Adjust these slightly later if needed */
-
-.instagram{
-left:19%;
-top:84.2%;
-width:9%;
-height:6%;
-}
-
-.facebook{
-left:31%;
-top:84.2%;
-width:9%;
-height:6%;
-}
-
-.youtube{
-left:43%;
-top:84.2%;
-width:9%;
-height:6%;
-}
-
-.whatsapp{
-left:55%;
-top:84.2%;
-width:9%;
-height:6%;
-}
-
-.x{
-left:67%;
-top:84.2%;
-width:9%;
-height:6%;
-}
-
-.threads{
-left:79%;
-top:84.2%;
-width:9%;
-height:6%;
-}
-</style>
 </head>
 
 <body>
@@ -112,31 +17,35 @@ height:6%;
 
 <img src="IMG_6925.jpeg" class="photo" alt="Nitturi Raju">
 
-<a class="link instagram"
-href="https://www.instagram.com/nitturirajuofficial?utm_source=qr&igsh=MWt1ODd5ZTY5ZXk5YQ=="
-target="_blank"></a>
+<!-- Touch Areas -->
 
-<a class="link facebook"
-href="https://www.facebook.com/share/17kp3yTkrx/"
-target="_blank"></a>
-
-<a class="link youtube"
+<a class="touch youtube"
 href="https://youtube.com/@nitturirajuofficial?si=iTl7IXM-UUTDVU6S"
 target="_blank"></a>
 
-<a class="link whatsapp"
+<a class="touch facebook"
+href="https://www.facebook.com/share/17kp3yTkrx/"
+target="_blank"></a>
+
+<a class="touch instagram"
+href="https://www.instagram.com/nitturirajuofficial?utm_source=qr&igsh=MWt1ODd5ZTY5ZXk5YQ=="
+target="_blank"></a>
+
+<a class="touch whatsapp"
 href="https://wa.me/919281414547"
 target="_blank"></a>
 
-<a class="link x"
+<a class="touch twitter"
 href="https://x.com/nitturiraju"
 target="_blank"></a>
 
-<a class="link threads"
+<a class="touch threads"
 href="https://www.threads.com/@nitturirajuofficial"
 target="_blank"></a>
 
 </div>
+
+<script src="script.js"></script>
 
 </body>
 </html>
