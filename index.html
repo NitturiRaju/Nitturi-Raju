@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,59 +11,128 @@ margin:0;
 padding:0;
 width:100%;
 height:100%;
-background:#000;
 overflow:hidden;
+background:#000;
 }
 
 .container{
 position:relative;
-width:100%;
-height:100%;
+width:100vw;
+height:100vh;
 }
 
 .photo{
 width:100%;
 height:100%;
 object-fit:cover;
+display:block;
 }
 
-.icons{
+/* Invisible clickable areas */
+.link{
 position:absolute;
-bottom:30px;
-left:50%;
-transform:translateX(-50%);
-display:flex;
-gap:18px;
+border-radius:50%;
+-webkit-tap-highlight-color:transparent;
+overflow:hidden;
 }
 
-.icons img{
-width:55px;
-height:55px;
+/* Ripple effect */
+.link::after{
+content:"";
+position:absolute;
+left:50%;
+top:50%;
+width:0;
+height:0;
 border-radius:50%;
-background:white;
-padding:8px;
+background:rgba(255,255,255,.45);
+transform:translate(-50%,-50%);
+transition:width .35s,height .35s,opacity .45s;
+opacity:0;
+}
+
+.link:active::after{
+width:120%;
+height:120%;
+opacity:1;
+}
+
+/* ---------- ICON POSITIONS ---------- */
+/* Adjust these slightly later if needed */
+
+.instagram{
+left:19%;
+top:84.2%;
+width:9%;
+height:6%;
+}
+
+.facebook{
+left:31%;
+top:84.2%;
+width:9%;
+height:6%;
+}
+
+.youtube{
+left:43%;
+top:84.2%;
+width:9%;
+height:6%;
+}
+
+.whatsapp{
+left:55%;
+top:84.2%;
+width:9%;
+height:6%;
+}
+
+.x{
+left:67%;
+top:84.2%;
+width:9%;
+height:6%;
+}
+
+.threads{
+left:79%;
+top:84.2%;
+width:9%;
+height:6%;
 }
 </style>
-
 </head>
 
 <body>
 
 <div class="container">
 
-<img src="d81c4849-3190-442d-8c7c-78b1c31c74cd.jpeg" class="photo">
+<img src="IMG_6925.jpeg" class="photo" alt="Nitturi Raju">
 
-<div class="icons">
+<a class="link instagram"
+href="https://www.instagram.com/nitturirajuofficial?utm_source=qr&igsh=MWt1ODd5ZTY5ZXk5YQ=="
+target="_blank"></a>
 
-<a href="#"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg"></a>
+<a class="link facebook"
+href="https://www.facebook.com/share/17kp3yTkrx/"
+target="_blank"></a>
 
-<a href="#"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg"></a>
+<a class="link youtube"
+href="https://youtube.com/@nitturirajuofficial?si=iTl7IXM-UUTDVU6S"
+target="_blank"></a>
 
-<a href="#"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/youtube.svg"></a>
+<a class="link whatsapp"
+href="https://wa.me/919281414547"
+target="_blank"></a>
 
-<a href="#"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"></a>
+<a class="link x"
+href="https://x.com/nitturiraju"
+target="_blank"></a>
 
-</div>
+<a class="link threads"
+href="https://www.threads.com/@nitturirajuofficial"
+target="_blank"></a>
 
 </div>
 
