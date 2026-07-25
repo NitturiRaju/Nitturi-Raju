@@ -4,20 +4,22 @@
     box-sizing:border-box;
 }
 
-html,body{
+html,
+body{
     width:100%;
     height:100%;
     background:#000;
+    overflow:hidden;
 }
 
 body{
     display:flex;
     justify-content:center;
     align-items:center;
-    overflow:hidden;
 }
 
-.container{
+.poster-wrap{
+    position:relative;
     width:100vw;
     height:100vh;
     display:flex;
@@ -26,12 +28,52 @@ body{
 }
 
 #poster{
-    max-width:100%;
-    max-height:100%;
-    width:auto;
-    height:auto;
+    width:100%;
+    height:100%;
     object-fit:contain;
     display:block;
     user-select:none;
     -webkit-user-drag:none;
+    pointer-events:none;
+}
+
+#overlay{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+}
+
+.hotspot{
+    fill:transparent;
+    cursor:pointer;
+    transition:all .15s ease;
+}
+
+.hotspot:hover{
+    fill:rgba(255,255,255,.12);
+}
+
+.hotspot:active{
+    fill:rgba(255,255,255,.25);
+}
+
+.ripple{
+    fill:rgba(255,255,255,.35);
+    animation:ripple .45s ease-out;
+    transform-origin:center;
+}
+
+@keyframes ripple{
+
+0%{
+transform:scale(.2);
+opacity:.8;
+}
+
+100%{
+transform:scale(1.7);
+opacity:0;
+}
+
 }
