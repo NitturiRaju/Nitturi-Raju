@@ -45,8 +45,8 @@ document.querySelectorAll(".hotspot").forEach(circle => {
 
         // Open link
         setTimeout(() => {
-            window.open(links[social], "_blank");
-        }, 150);
+    window.open(links[social], "_blank");
+}, 150);
 
     });
 
