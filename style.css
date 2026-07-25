@@ -1,85 +1,58 @@
 *{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
 
 html,body{
-  width:100%;
-  height:100%;
-  background:#000;
-  overflow:hidden;
-  font-family:Arial,sans-serif;
+width:100%;
+height:100%;
+overflow:hidden;
+background:#000;
 }
 
-.container{
-  position:relative;
-  width:100vw;
-  height:100vh;
-  overflow:hidden;
+.poster{
+position:relative;
+width:100vw;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:#000;
 }
 
-.photo{
-  width:100%;
-  height:100%;
-  object-fit:contain;
-  display:block;
-  background:#000;
+#posterImage{
+width:100%;
+height:100%;
+object-fit:contain;
+display:block;
+user-select:none;
+-webkit-user-drag:none;
 }
 
-/* Touch Area */
-.touch{
-  position:absolute;
-  width:64px;
-  height:64px;
-  border-radius:50%;
-  display:block;
-  -webkit-tap-highlight-color:transparent;
-  text-decoration:none;
-  overflow:hidden;
-  transition:transform .15s ease;
+#overlay{
+position:absolute;
+left:0;
+top:0;
+width:100%;
+height:100%;
+pointer-events:none;
 }
 
-.touch:active{
-  transform:scale(.88);
+/* Clickable circles */
+#overlay a{
+pointer-events:auto;
 }
 
-/* -------- FIRST ROW -------- */
-
-/* 1. YouTube */
-.youtube{
-  left:22%;
-  top:72%;
+/* Invisible circles */
+.icon{
+fill:transparent;
+cursor:pointer;
+transition:.15s;
+transform-origin:center;
+-webkit-tap-highlight-color:transparent;
 }
 
-/* 2. Facebook */
-.facebook{
-  left:45%;
-  top:72%;
-}
-
-/* 3. Instagram */
-.instagram{
-  left:68%;
-  top:72%;
-}
-
-/* -------- SECOND ROW -------- */
-
-/* 4. WhatsApp */
-.whatsapp{
-  left:22%;
-  top:84%;
-}
-
-/* 5. X (Twitter) */
-.twitter{
-  left:45%;
-  top:84%;
-}
-
-/* 6. Threads */
-.threads{
-  left:68%;
-  top:84%;
+.icon:active{
+transform:scale(.88);
 }
