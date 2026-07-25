@@ -26,7 +26,7 @@ document.querySelectorAll(".hotspot").forEach(circle => {
 
     ripple.setAttribute("cx", this.getAttribute("cx"));
     ripple.setAttribute("cy", this.getAttribute("cy"));
-    ripple.setAttribute("r", "10"); // Smaller pop
+    ripple.setAttribute("r", "5");// Smaller pop
     ripple.setAttribute("class", "ripple");
 
     svg.appendChild(ripple);
