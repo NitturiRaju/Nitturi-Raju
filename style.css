@@ -47,20 +47,22 @@ body{
 .hotspot{
     fill:transparent;
     cursor:pointer;
-    transition:all .15s ease;
+    transition:transform .15s ease;
 }
 
+/* No white circle on touch */
 .hotspot:hover{
-    fill:rgba(255,255,255,.12);
+    fill:transparent;
 }
 
 .hotspot:active{
-    fill:rgba(255,255,255,.25);
+    fill:transparent;
 }
 
+/* Ripple */
 .ripple{
-    fill:rgba(255,255,255,.35);
-    animation:ripple .45s ease-out;
+    fill:rgba(255,255,255,.18);
+    animation:ripple .35s ease-out;
     transform-origin:center;
 }
 
@@ -68,11 +70,11 @@ body{
 
 0%{
 transform:scale(.2);
-opacity:.8;
+opacity:.7;
 }
 
 100%{
-transform:scale(1.7);
+transform:scale(1.6);
 opacity:0;
 }
 
