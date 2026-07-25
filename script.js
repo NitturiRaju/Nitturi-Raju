@@ -18,7 +18,7 @@ document.querySelectorAll(".hotspot").forEach(circle => {
     // Remove previous ripple
     svg.querySelectorAll(".ripple").forEach(r => r.remove());
 
-    // Small ripple
+    // Tiny tap effect
     const ripple = document.createElementNS(
       "http://www.w3.org/2000/svg",
       "circle"
@@ -26,7 +26,7 @@ document.querySelectorAll(".hotspot").forEach(circle => {
 
     ripple.setAttribute("cx", this.getAttribute("cx"));
     ripple.setAttribute("cy", this.getAttribute("cy"));
-    ripple.setAttribute("r", "5");// Smaller pop
+    ripple.setAttribute("r", "1.5");
     ripple.setAttribute("class", "ripple");
 
     svg.appendChild(ripple);
@@ -43,7 +43,7 @@ document.querySelectorAll(".hotspot").forEach(circle => {
       navigator.vibrate(10);
     }
 
-    // Always navigate
+    // Open link
     setTimeout(() => {
       location.assign(links[social]);
     }, 50);
