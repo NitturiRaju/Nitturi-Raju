@@ -26,7 +26,7 @@ document.querySelectorAll(".hotspot").forEach(circle => {
 
         ripple.setAttribute("cx", this.getAttribute("cx"));
         ripple.setAttribute("cy", this.getAttribute("cy"));
-        ripple.setAttribute("r", "52");
+        ripple.setAttribute("r", "20");
         ripple.setAttribute("class", "ripple");
 
         svg.appendChild(ripple);
