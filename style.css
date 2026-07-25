@@ -7,52 +7,58 @@ box-sizing:border-box;
 html,body{
 width:100%;
 height:100%;
-overflow:hidden;
 background:#000;
+overflow:hidden;
+font-family:sans-serif;
 }
 
-.poster{
+#container{
 position:relative;
 width:100vw;
 height:100vh;
 display:flex;
 justify-content:center;
 align-items:center;
-background:#000;
 }
 
-#posterImage{
+#poster{
 width:100%;
 height:100%;
 object-fit:contain;
-display:block;
 user-select:none;
 -webkit-user-drag:none;
 }
 
-#overlay{
+.hotspot{
 position:absolute;
-left:0;
-top:0;
-width:100%;
-height:100%;
+width:72px;
+height:72px;
+border:none;
+border-radius:50%;
+background:transparent;
+cursor:pointer;
+outline:none;
+-webkit-tap-highlight-color:transparent;
+transition:transform .12s;
+overflow:hidden;
+}
+
+.hotspot:active{
+transform:scale(.88);
+}
+
+.ripple{
+position:absolute;
+border-radius:50%;
+transform:scale(0);
+animation:ripple .5s linear;
+background:rgba(255,255,255,.35);
 pointer-events:none;
 }
 
-/* Clickable circles */
-#overlay a{
-pointer-events:auto;
+@keyframes ripple{
+to{
+transform:scale(4);
+opacity:0;
 }
-
-/* Invisible circles */
-.icon{
-fill:transparent;
-cursor:pointer;
-transition:.15s;
-transform-origin:center;
--webkit-tap-highlight-color:transparent;
-}
-
-.icon:active{
-transform:scale(.88);
 }
